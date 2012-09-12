@@ -24,6 +24,7 @@ $.fn.marqueeOrg = function ( opts ){
         mq : $(':first', this)
     },
     settings = $.extend(defaults, opts);
+
     var mq = defaults.mq;
     mqH    = mq.height();
     mqW    = mq.width();
