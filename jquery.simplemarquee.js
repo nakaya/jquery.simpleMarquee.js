@@ -19,34 +19,32 @@
  * Rev:  1.0.00
  */
 
-$(function(){
-    $.fn.marqueeOrg = function ( opts ){
-        var defaults = {
-            mq : $(':first', this)
-        },
-        settings = $.extend(defaults, opts);
-        var startPosition = $(this).width() + 10;
-        var mq        = defaults.mq;
-        mqH = mq.height();
-        mqW = mq.width();
-        endPosition = startPosition + mqW;
-    
-        mq.css({
-            'left'         : startPosition
-            , 'position'   : 'absolute'
-            , 'white-space': 'nowrap'
-            , 'display'    : 'block'
+$.fn.marqueeOrg = function ( opts ){
+    var defaults = {
+        mq : $(':first', this)
+    },
+    settings = $.extend(defaults, opts);
+    var startPosition = $(this).width() + 10;
+    var mq        = defaults.mq;
+    mqH = mq.height();
+    mqW = mq.width();
+    endPosition = startPosition + mqW;
+
+    mq.css({
+        'left'         : startPosition
+        , 'position'   : 'absolute'
+        , 'white-space': 'nowrap'
+        , 'display'    : 'block'
+    });
+
+    var animate = function(){
+        mq.animate({
+            left : '-' + endPosition + 'px'
+        }, 3000 , 'swing' , function(){
+            mq.css({'left': startPosition });
+            animate();
         });
-    
-        var animate = function(){
-            mq.animate({
-                left : '-' + endPosition + 'px'
-            }, 3000 , 'swing' , function(){
-                mq.css({'left': startPosition });
-                animate();
-            });
-        };
-        animate();
     };
-});
+    animate();
+};
 
