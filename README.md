@@ -9,6 +9,7 @@ jQuery plugin : Simple marquee.
 
 使い方 :
 
+<pre>
 &lt;script src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/script&gt;<br>
 &lt;script&gt;<br>
 google.load(&quot;jquery&quot;, &quot;1.7.1&quot;);<br>
@@ -41,6 +42,6 @@ $(function(){<br>
 &lt;div id=&quot;marqueeOrg2&quot; class=&quot;marqueeOrg&quot;&gt;<br>
     &lt;span class=&quot;nagareru&quot;&gt;流れるプール（オプション有り）&lt;/span&gt;<br>
 &lt;/div&gt;
-
+</pre>
 
 
