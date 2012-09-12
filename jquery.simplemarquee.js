@@ -24,17 +24,18 @@ $.fn.marqueeOrg = function ( opts ){
         mq : $(':first', this)
     },
     settings = $.extend(defaults, opts);
+    var mq = defaults.mq;
+    mqH    = mq.height();
+    mqW    = mq.width();
+
     var startPosition = $(this).width() + 10;
-    var mq        = defaults.mq;
-    mqH = mq.height();
-    mqW = mq.width();
     endPosition = startPosition + mqW;
 
     mq.css({
-        'left'         : startPosition
-        , 'position'   : 'absolute'
-        , 'white-space': 'nowrap'
-        , 'display'    : 'block'
+        'left'          : startPosition
+        , 'position'    : 'absolute'
+        , 'white-space' : 'nowrap'
+        , 'display'     : 'block'
     });
 
     var animate = function(){
