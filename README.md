@@ -16,11 +16,18 @@ google.load(&quot;jquery&quot;, &quot;1.7.1&quot;);
 &lt;script src=&quot;./jquery.simplemarquee.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 $(function(){
-   // オプションが無い場合最初にくるDOM要素が流れる
+  // オプションが無い場合最初にくるDOM要素が流れる
    $('#marquee1').simpleMarquee();
 
-   // オプションで指定した要素が流れる
-   $('#marquee2').simpleMarquee('.nagareru');
+   // オプション
+   // marquee : $('.nagareru', this)
+   // easing  : 'swing' || 'linear'
+   // speed   : 'fast' || 'normal' || 'slow' or 3000
+   $('#marquee2').simpleMarquee({
+       marquee   : $('.nagareru', this)
+       , easing  : 'linear'
+       , speed   : 6000
+   });
 });
 &lt;/script&gt;
 

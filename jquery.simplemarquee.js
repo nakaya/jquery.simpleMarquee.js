@@ -19,15 +19,15 @@
  * Rev:  1.0.00
  */
 
-$.fn.simpleMmarquee = function ( opts ){
+$.fn.simpleMarquee = function ( opts ){
     var defaults = {
-        mq       : $(':first', this)
+        marquee  : $(':first', this)
         , easing : 'swing'
         , speed  : 3000
     },
     settings = $.extend(defaults, opts);
 
-    var mq = defaults.mq;
+    var mq = defaults.marquee;
     mqH    = mq.height();
     mqW    = mq.width();
 
