@@ -21,13 +21,18 @@
 
 $.fn.simpleMmarquee = function ( opts ){
     var defaults = {
-        mq : $(':first', this)
+        mq       : $(':first', this)
+        , easing : 'swing'
+        , speed  : 3000
     },
     settings = $.extend(defaults, opts);
 
     var mq = defaults.mq;
     mqH    = mq.height();
     mqW    = mq.width();
+
+    var easing = defaults.easing;
+    var speed  = defaults.speed;
 
     var startPosition = $(this).width() + 10;
     endPosition = startPosition + mqW;
@@ -42,7 +47,7 @@ $.fn.simpleMmarquee = function ( opts ){
     var animate = function(){
         mq.animate({
             left : '-' + endPosition + 'px'
-        }, 3000 , 'swing' , function(){
+        }, speed , easing , function(){
             mq.css({'left': startPosition });
             animate();
         });
