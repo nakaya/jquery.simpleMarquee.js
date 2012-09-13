@@ -37,7 +37,7 @@ $.fn.simpleMarquee = function ( opts ){
     });
     mqH    = mq.height();
     mqW    = mq.width();
-    endPosition = startPosition + mqW;
+    var endPosition = mqW + 10;
 
     var easing = defaults.easing;
     var speed  = defaults.speed;
