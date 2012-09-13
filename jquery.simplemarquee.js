@@ -28,6 +28,12 @@ $.fn.simpleMarquee = function ( opts ){
     settings = $.extend(defaults, opts);
 
     var mq = defaults.marquee;
+    mq.css({
+        'left'          : startPosition
+        , 'position'    : 'absolute'
+        , 'white-space' : 'nowrap'
+        , 'display'     : 'block'
+    });
     mqH    = mq.height();
     mqW    = mq.width();
 
@@ -36,13 +42,6 @@ $.fn.simpleMarquee = function ( opts ){
 
     var startPosition = $(this).width() + 10;
     endPosition = startPosition + mqW;
-
-    mq.css({
-        'left'          : startPosition
-        , 'position'    : 'absolute'
-        , 'white-space' : 'nowrap'
-        , 'display'     : 'block'
-    });
 
     var animate = function(){
         mq.animate({
