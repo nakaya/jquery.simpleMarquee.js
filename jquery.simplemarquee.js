@@ -26,6 +26,7 @@ $.fn.simpleMarquee = function ( opts ){
         , speed  : 3000
     },
     settings = $.extend(defaults, opts);
+    var startPosition = $(this).width() + 10;
 
     var mq = defaults.marquee;
     mq.css({
@@ -36,12 +37,10 @@ $.fn.simpleMarquee = function ( opts ){
     });
     mqH    = mq.height();
     mqW    = mq.width();
+    endPosition = startPosition + mqW;
 
     var easing = defaults.easing;
     var speed  = defaults.speed;
-
-    var startPosition = $(this).width() + 10;
-    endPosition = startPosition + mqW;
 
     var animate = function(){
         mq.animate({
