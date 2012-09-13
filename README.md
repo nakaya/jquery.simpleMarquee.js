@@ -16,10 +16,11 @@ google.load(&quot;jquery&quot;, &quot;1.7.1&quot;);
 &lt;script src=&quot;./jquery.simplemarquee.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 $(function(){
-  // オプションが無い場合最初にくるDOM要素が流れる
+
+  // オプションが無い場合、指定したセレクターの子供要素から最初に現れる要素が流れる
    $('#marquee1').simpleMarquee();
 
-   // オプション
+   // オプション有りの場合、セレクター、挙動、スピードを設定できる
    // marquee : $('.nagareru', this)
    // easing  : 'swing' || 'linear'
    // speed   : 'fast' || 'normal' || 'slow' or 3000
@@ -28,6 +29,7 @@ $(function(){
        , easing  : 'linear'
        , speed   : 6000
    });
+
 });
 &lt;/script&gt;
 
