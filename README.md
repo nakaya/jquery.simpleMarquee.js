@@ -4,7 +4,7 @@ jQuery plugin : Simple marquee.
 これはなにか : 
 
 テキストが右から左へ流れるだけのシンプルなMarqueeです。
-
+<a href="http://funafuna.seesaa.net/article/292328072.html">サンプル</a>
 
 使い方 :
 
