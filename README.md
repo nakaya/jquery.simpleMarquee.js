@@ -17,15 +17,15 @@ google.load(&quot;jquery&quot;, &quot;1.7.1&quot;);
 &lt;script&gt;
 $(function(){
    // オプションが無い場合最初にくるDOM要素が流れる
-   $('#marqueeOrg').marqueeOrg();
+   $('#marquee1').simpleMarquee();
 
    // オプションで指定した要素が流れる
-   $('#marqueeOrg2').marqueeOrg('.nagareru');
+   $('#marquee2').simpleMarquee('.nagareru');
 });
 &lt;/script&gt;
 
 &lt;style&gt;
-.marqueeOrg{
+.simplemarquee{
     width:200px;
     border:solid 1px #000;
     position:relative;
@@ -34,11 +34,11 @@ $(function(){
 }
 &lt;/style&gt;
 
-&lt;div id=&quot;marqueeOrg&quot; class=&quot;marqueeOrg&quot;&gt;
+&lt;div id=&quot;marquee1&quot; class=&quot;simplemarquee&quot;&gt;
     &lt;span&gt;流れるプール&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;marqueeOrg2&quot; class=&quot;marqueeOrg&quot;&gt;
+&lt;div id=&quot;marquee2&quot; class=&quot;simplemarquee&quot;&gt;
     &lt;span class=&quot;nagareru&quot;&gt;流れるプール（オプション有り）&lt;/span&gt;
 &lt;/div&gt;
 </pre>

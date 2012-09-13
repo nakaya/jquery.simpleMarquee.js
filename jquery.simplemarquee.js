@@ -19,7 +19,7 @@
  * Rev:  1.0.00
  */
 
-$.fn.marqueeOrg = function ( opts ){
+$.fn.simpleMmarquee = function ( opts ){
     var defaults = {
         mq : $(':first', this)
     },
