@@ -13,7 +13,7 @@ jQuery plugin : Simple marquee.
 &lt;script&gt;
 google.load(&quot;jquery&quot;, &quot;1.7.1&quot;);
 &lt;/script&gt;
-&lt;script src=&quot;./jquery.simplemarquee.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./jquery.simpleMarquee.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 $(function(){
 
